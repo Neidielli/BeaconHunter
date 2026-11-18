@@ -1,0 +1,21 @@
+digraph BeaconHunter_Topology {
+  rankdir=LR;
+  bgcolor="#0b0f19";
+  node [style="filled,rounded", shape=box, fontname="Consolas", fontcolor="#e2e8f0"];
+  edge [fontname="Consolas", fontsize=10, fontcolor="#94a3b8"];
+
+  "192.168.1.45" [label="Host 192.168.1.45\n[INTERNAL_HOST | Risk: 100.0]", fillcolor="#161f33", color="#ff0055", penwidth=2];
+  "185.220.101.34" [label="185.220.101.34:443
+(cdn-Telemetry-update.azureedge-sync.com)\n[C2_SERVER | Risk: 100.0]", fillcolor="#161f33", color="#ff0055", penwidth=2];
+  "45.77.120.88" [label="45.77.120.88:8443
+(mtls-gw.sliver-ops.org)\n[C2_SERVER | Risk: 100.0]", fillcolor="#161f33", color="#ff0055", penwidth=2];
+  "DOM:c2-shadow-ops.net" [label="c2-shadow-ops.net\n[EXFIL_DOMAIN | Risk: 99.0]", fillcolor="#161f33", color="#ff0055", penwidth=2];
+  "192.168.1.112" [label="Host 192.168.1.112\n[INTERNAL_HOST | Risk: 95.5]", fillcolor="#161f33", color="#ff0055", penwidth=2];
+  "DOM:Multiple DGA Domains (24 unique)" [label="Multiple DGA Domains (24 unique)\n[DGA_DOMAIN | Risk: 95.5]", fillcolor="#161f33", color="#ff0055", penwidth=2];
+  "8.8.8.8" [label="DNS 8.8.8.8\n[DNS_SERVER | Risk: 40.0]", fillcolor="#161f33", color="#00e5ff", penwidth=2];
+
+  "192.168.1.45" -> "185.220.101.34" [label="C2 Beacon (58.3s / 5.7% jitter)", color="#ff0055", penwidth=1.8];
+  "192.168.1.45" -> "45.77.120.88" [label="C2 Beacon (15.21s / 3.9% jitter)", color="#ff0055", penwidth=1.8];
+  "192.168.1.45" -> "DOM:c2-shadow-ops.net" [label="DNS Tunnel (H=4.73 bits, ~757B)", color="#ff0055", penwidth=1.8];
+  "192.168.1.112" -> "DOM:Multiple DGA Domains (24 unique)" [label="DGA Burst (24 doms, H=3.69)", color="#ff0055", penwidth=1.8];
+}

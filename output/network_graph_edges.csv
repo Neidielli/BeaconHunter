@@ -1,0 +1,5 @@
+Source_Node,Target_Node,Protocol,Port,Severity,Packet_Count,Byte_Volume,Relationship
+192.168.1.45,185.220.101.34,TLS,443,CRITICAL,36,5472,C2 Beacon (58.3s / 5.7% jitter)
+192.168.1.45,45.77.120.88,TLS,8443,CRITICAL,24,5736,C2 Beacon (15.21s / 3.9% jitter)
+192.168.1.45,DOM:c2-shadow-ops.net,DNS,53,CRITICAL,10,757,"DNS Tunnel (H=4.73 bits, ~757B)"
+192.168.1.112,DOM:Multiple DGA Domains (24 unique),DNS,53,CRITICAL,24,2160,"DGA Burst (24 doms, H=3.69)"

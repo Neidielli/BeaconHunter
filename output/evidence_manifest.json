@@ -1,0 +1,56 @@
+{
+  "tool": "BeaconHunter \u2014 PCAP Network Threat & C2 Beaconing Detector",
+  "version": "1.0.0",
+  "compliance_standards": [
+    "RFC 3227 (Guidelines for Evidence Collection and Archiving)",
+    "ISO/IEC 27037:2012 (Digital Evidence Identification & Preservation)",
+    "NIST SP 800-86 (Forensic Techniques into Incident Response)"
+  ],
+  "source_evidence": {
+    "pcap_path": "C:\\Users\\neidi\\.gemini\\antigravity\\scratch\\BeaconHunter\\samples\\c2_apt_intrusion.pcap",
+    "sha256_checksum": "25e2642c974b5cd3cfe427d4b514ac44158cba43ee44851926590cd063042a61",
+    "file_size_bytes": 29463,
+    "total_packets_analyzed": 182,
+    "capture_duration_seconds": 994.14
+  },
+  "analysis_timestamp_utc": "2026-11-18T01:58:09Z",
+  "summary_counts": {
+    "total_alerts": 8,
+    "c2_beacons_detected": 2,
+    "dns_anomalies_detected": 2,
+    "malicious_ja3_fingerprints": 4,
+    "suspicious_graph_nodes": 7
+  },
+  "generated_forensic_artifacts": {
+    "threat_alerts_csv": {
+      "path": "C:\\Users\\neidi\\.gemini\\antigravity\\scratch\\BeaconHunter\\output\\threat_alerts.csv",
+      "sha256": "35e7110bac032e51a098d8d68312266a4ca184c80f140a99d98fcc1d39d02253",
+      "size_bytes": 4738
+    },
+    "c2_beacons_csv": {
+      "path": "C:\\Users\\neidi\\.gemini\\antigravity\\scratch\\BeaconHunter\\output\\c2_beacons.csv",
+      "sha256": "20ea57ff7b18dbb0d26dfe8cea321013e29d1498ab8545b73258be35bc96838f",
+      "size_bytes": 1249
+    },
+    "dns_forensics_csv": {
+      "path": "C:\\Users\\neidi\\.gemini\\antigravity\\scratch\\BeaconHunter\\output\\dns_forensics.csv",
+      "sha256": "b25cd1c75a3080f5015cd9d6e2fd2cbe364b7694d1009f617a6126e330022159",
+      "size_bytes": 1740
+    },
+    "tls_ja3_csv": {
+      "path": "C:\\Users\\neidi\\.gemini\\antigravity\\scratch\\BeaconHunter\\output\\tls_ja3_fingerprints.csv",
+      "sha256": "fbd51c9362602ca319b1f3f8003e8c6a9d1a1586454249ba294e0cc270669a35",
+      "size_bytes": 2337
+    },
+    "network_graph_csv": {
+      "path": "C:\\Users\\neidi\\.gemini\\antigravity\\scratch\\BeaconHunter\\output\\network_graph_edges.csv",
+      "sha256": "f864317714aa59aad2525bb47da9804ceb5d737ad07edc92fa8526820f90838c",
+      "size_bytes": 457
+    },
+    "network_topology_dot": {
+      "path": "C:\\Users\\neidi\\.gemini\\antigravity\\scratch\\BeaconHunter\\output\\network_topology.dot",
+      "sha256": "ad7a7da06a7cb4c6073c1c804b6f4b9b0dc802568f8be7dff6dce50b559981e8",
+      "size_bytes": 1690
+    }
+  }
+}
