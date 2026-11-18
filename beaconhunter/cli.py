@@ -8,6 +8,7 @@ Commands:
   - ja3-db    : Inspect the curated JA3 / JA3S Threat Intelligence Signature Database.
 """
 
+import sys
 from pathlib import Path
 from typing import Optional
 
@@ -17,6 +18,14 @@ from rich.panel import Panel
 from rich.table import Table
 from rich.tree import Tree
 from rich import box
+
+# Ensure UTF-8 output on Windows consoles for box-drawing and emoji characters
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 from beaconhunter.analyzers.graph_builder import run_full_pcap_analysis
 from beaconhunter.exporters.csv_exporter import export_forensic_csv_suite

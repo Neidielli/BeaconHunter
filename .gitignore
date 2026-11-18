@@ -19,5 +19,6 @@ env/
 .DS_Store
 Thumbs.db
 
-# Temporary files
+# Temporary files & PyInstaller spec
 *.tmp
+*.spec
